@@ -22,8 +22,12 @@ Route::get('/hello',function(){
     return ['name' => 'world'];
 });
 
-Route::get('/hello/world',function(){
-    echo "Hello World";
+Route::get('/hello/{world}',function($world){
+    // echo "Hello World";
+    return view("info",[
+        'name' => $world,
+        'time' => time()
+    ]);
 });
 
 Route::get('/hello/{name}',function($worldName){
@@ -41,8 +45,15 @@ Route::get('/greet/{greetings}/name/{name}',function($greetings,$worldName){
 
 Route::post('/say',function(Request $request){
     // $greeting = $request->post('greeting'); //HTTP POST VERB
-    $newName = $request->post('name'); //HTTP POST VERB
     // $all = $request->all();
     // echo $all['name'] $all['greeting'];
-    echo "Hello {$newName}";
+    // echo "Hello {$newName}";
+
+    $newName = $request->post('name'); //HTTP POST VERB
+    $greetings = $request->post('greetings'); //HTTP POST VERB
+    return view("info",[
+        'name' => $newName,
+        'greet' => $greetings,
+        // 'time' => time()
+    ]);
 });
