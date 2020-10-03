@@ -14,7 +14,7 @@
 <link href="//getbootstrap.com/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 <!-- Custom styles for this template -->
-<link href="//getbootstrap.com/docs/4.5/examples/cover/cover.css" rel="stylesheet">
+<link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
     <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -68,4 +68,5 @@
   </footer>
 </div>
 </body>
+<script src="{{ asset('assets/scripts/main.js') }}"></script>
 </html>
