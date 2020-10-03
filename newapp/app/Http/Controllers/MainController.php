@@ -18,4 +18,16 @@ class MainController extends Controller
     function postRequest(Request $request){
         $name = $request->post('name');
     }
+
+    function main(){
+        return view("welcome");
+    }
+
+    function features(){
+        return view("features");
+    }
+
+    function contact(){
+        return view("contact");
+    }
 }

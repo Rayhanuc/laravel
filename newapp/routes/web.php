@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+// namespace App\Http\Controllers\MainController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,24 +24,7 @@ Route::get('/hello/world', [MainController::class, 'sayHi']);
 Route::get('/sayname/{name}', [MainController::class, 'sayMyName']);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Route::get('/hello',function(){
+Route::get('/hello',function(){
     return ['name' => 'world'];
 });
 
@@ -78,4 +62,9 @@ Route::post('/say',function(Request $request){
         'greet' => $greetings,
         // 'time' => time()
     ]);
-});*/
+});
+
+
+Route::get('/',[MainController::class,'main']);
+Route::get('/features',[MainController::class,'features']);
+Route::get('/contact',[MainController::class,'contact']);
