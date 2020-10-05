@@ -55,7 +55,10 @@ class MainController extends Controller
         ->get(['id','name']) 
         );
 
-        // return (DB::select("select id, name from people"));
+        // return (DB::select("select id, name from people"));        
+    }
+
+    function testModel(){
         
     }
 }
