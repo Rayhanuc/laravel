@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\People;
+
+
 
 class MainController extends Controller
 {
@@ -59,6 +62,26 @@ class MainController extends Controller
     }
 
     function testModel(){
+        // $people = People::all()->skip(1)->take(2);
+        // $people = People::find(1);
+        // $people = People::where('id','>',1)->where('id','>',4)->get();
+        // $people = People::where('id','>',1)->count();
+        // return $people;
+
+        // $person = People::whereEmail('jamal@uddin.com')->first(); // get() / first()
+        // $person = People::whereName('Kamal Hossen')->first()->displayNameAndEmail(); // get() / first()
+
+        /* $person = People::find(1);
+        $person->name = "Kamal Hossen 1";
+        $person->save();
+        $person = $person->fresh();
+        return $person; */
         
+        $person = People::find(1);
+        $person->addJr();
+        $person->fresh();
+
+        return $person;
+        // echo "Hello";
     }
 }
