@@ -70,3 +70,5 @@ Route::get('/features',[MainController::class,'features']);
 Route::get('/contact',[MainController::class,'contact']);
 Route::get('/allpeople',[MainController::class,'allpeople']);
 Route::get('/test',[MainController::class,'testModel']);
+Route::get('/form',[FormController::class,'displayForm'])->name("form.create");
+Route::post('/save',[FormController::class,'saveForm'])->name("form.save");
