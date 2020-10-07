@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\People;
+use App\Models\Post;
 
 
 
@@ -77,11 +78,16 @@ class MainController extends Controller
         $person = $person->fresh();
         return $person; */
         
-        $person = People::find(1);
+        /* $person = People::find(1);
         $person->addJr();
         $person->fresh();
 
-        return $person;
+        return $person; */
+
+        $person = People::find(1);
+        $posts = $person->posts;
+
+        return $posts; //take(1) / limit(2)
         // echo "Hello";
     }
 }

@@ -16,4 +16,9 @@ class People extends Model
     function addJr(){
         $this->name .= " Jr";
     }
+
+    function posts() {
+        // return $this->hasMany('App\Models\post');
+        return $this->hasMany(\App\Models\post::class);
+    }
 }
