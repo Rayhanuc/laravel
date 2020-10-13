@@ -1,2 +1,2 @@
-alert("Hello");
+// alert("Hello");
 console.log('Loaded');

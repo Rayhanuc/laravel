@@ -9,6 +9,8 @@ class People extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name','email'];
+
     function displayNameAndEmail(){
         echo $this->name ." : ".$this->email;
     }
