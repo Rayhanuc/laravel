@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+use App\Http\Controllers\PostsController;
 // namespace App\Http\Controllers\MainController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -64,11 +65,12 @@ Route::post('/say',function(Request $request){
     ]);
 });
 
-
-Route::get('/',[MainController::class,'main']);
+// Route::get('/',[MainController::class,'main']);
+/* ;
 Route::get('/features',[MainController::class,'features']);
 Route::get('/contact',[MainController::class,'contact']);
 Route::get('/allpeople',[MainController::class,'allpeople']);
 Route::get('/test',[MainController::class,'testModel']);
 Route::get('/form',[FormController::class,'displayForm'])->name("form.create");
-Route::post('/save',[FormController::class,'saveForm'])->name("form.save");
+Route::post('/save',[FormController::class,'saveForm'])->name("form.save"); */
+Route::get('/',[PostController::class,'createPost'])->name("posts.create");
